@@ -1,0 +1,175 @@
+/* signup.css */
+
+:root {
+    --primary-color: #4a90e2; /* Bright blue tone for a modern touch */
+    --secondary-color: #34495e; /* Darker for contrast */
+    --background-color: #f9f9f9;
+    --input-border-color: #ddd;
+    --input-focus-color: #4a90e2;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --white: #ffffff;
+    --text-color: #333;
+    --input-placeholder-color: #888;
+    --button-hover-color: #357ABD;
+    --button-shadow: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.signup-box {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--button-shadow);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-logo h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.signup-heading {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.signup-subheading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--input-placeholder-color);
+}
+
+.signup-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--input-focus-color);
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+.input-hint {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--input-placeholder-color);
+}
+
+.form-actions {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+    box-shadow: 0 6px 12px var(--button-shadow);
+}
+
+.redirect-link {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--input-placeholder-color);
+}
+
+.redirect-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.redirect-link a:hover {
+    color: var(--button-hover-color);
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: var(--input-placeholder-color);
+}
+
+/* Messages */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.messages li {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.messages .success {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.messages .error {
+    background-color: var(--error-color);
+    color: var(--white);
+}

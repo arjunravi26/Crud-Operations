@@ -1,0 +1,218 @@
+/* home.css */
+
+:root {
+    --primary-color: #007aff; /* Apple's signature blue */
+    --secondary-color: #5856d6; /* Subtle purple */
+    --text-color: #1c1c1e;
+    --background-color: #f5f5f7;
+    --white: #ffffff;
+    --border-color: #d1d1d6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #005ac1;
+    --button-hover-bg: #34c759; /* Light green for secondary buttons */
+    --button-hover-shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: var(--white);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.btn {
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-secondary {
+    background-color: var(--button-hover-bg);
+    color: var(--white);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-logout {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.intro p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.intro .btn {
+    margin-top: 2rem;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--hover-color);
+}
+
+.dashboard-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.dashboard-item p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.dashboard-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dashboard-item ul li {
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 0.75rem 0;
+}
+/* Footer */
+.footer {
+    background-color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.75rem 0;
+    }
+
+    .btn-logout {
+        margin-top: 1rem;
+    }
+}
